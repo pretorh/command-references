@@ -1,5 +1,6 @@
-# one-liners
-Collection of commands for various stuff
+# command-references
+
+This is a collection of command references and one-line commands for various stuff.
 
 ## Parsing
 

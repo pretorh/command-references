@@ -20,7 +20,7 @@ ex: `echo '{"test":{"abc": "def", "ghi": 5}}' | python -c 'import sys, json; j =
 [source](http://www.cambus.net/parsing-json-from-command-line-using-python/)
 
 
-## Encryption
+## Encryption / Security
 
 ### GPG
 
@@ -50,3 +50,11 @@ Import:
 `gpg --import <file>`
 
 [source](https://www.gnupg.org/gph/en/manual/x56.html)
+
+### ssh
+
+#### Creating a new key
+
+`ssh-keygen -t rsa -b 4096 -f ~/.ssh/dummy -C dummy`
+
+Creates a file specified by `-f` using the comment (the last part in the `.pub` file) from `-C`

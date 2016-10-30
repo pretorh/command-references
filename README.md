@@ -13,9 +13,22 @@ This is a collection of command references and one-line commands for various stu
 
 #### Print nested JSON
 
-`python -c 'import sys, json; j = json.load(sys.stdin); j = j["field"]["NestedField"]; print json.dumps(j, indent=4)'`
+`python -c 'import sys, json; j = json.load(sys.stdin); val = j["field"]["nestedField"]; print(json.dumps(val, indent=4));'`
 
-ex: `echo '{"test":{"abc": "def", "ghi": 5}}' | python -c 'import sys, json; j = json.load(sys.stdin); j = j["test"]["abc"]; print json.dumps(j, indent=4)'`
+For example, to get value of the `test.abc` field (`"def"`) from the following json:
+```
+{
+    "test": {
+        "abc": "def",
+        "ghi": 5
+    }
+}
+```
+
+```
+echo '{"test":{"abc": "def", "ghi": 5}}' | \
+python -c 'import sys, json; j = json.load(sys.stdin); val = j["test"]["abc"]; print(json.dumps(val, indent=4));'
+```
 
 [source](http://www.cambus.net/parsing-json-from-command-line-using-python/)
 

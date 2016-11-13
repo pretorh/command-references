@@ -71,3 +71,22 @@ Import:
 `ssh-keygen -t rsa -b 4096 -f ~/.ssh/dummy -C dummy`
 
 Creates a file specified by `-f` using the comment (the last part in the `.pub` file) from `-C`
+
+## System
+
+### Create Linux swapfile
+
+Create and enable now:
+```
+dd if=/dev/zero of=/tmp/swapfile bs=1024 count=524288
+chown root:root /tmp/swapfile
+chmod 0600 /tmp/swapfile
+mkswap /tmp/swapfile
+swapon /tmp/swapfile
+```
+
+Add to `fstab` if you want to use it after reboot:
+
+`/tmp/swapfile none swap sw 0 0`
+
+[source](http://www.cyberciti.biz/faq/linux-add-a-swap-file-howto/)

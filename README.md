@@ -90,3 +90,17 @@ Add to `fstab` if you want to use it after reboot:
 `/tmp/swapfile none swap sw 0 0`
 
 [source](http://www.cyberciti.biz/faq/linux-add-a-swap-file-howto/)
+
+### Updating
+
+#### Arch
+
+`pacman -Syu`
+
+Download only:
+
+`pacman -Syuw --noconfirm`
+
+#### CentOS
+
+`yum update`

@@ -1,4 +1,4 @@
-# command-references
+# command references
 
 This is a collection of command references and one-line commands for various stuff.
 
@@ -32,6 +32,9 @@ python -c 'import sys, json; j = json.load(sys.stdin); val = j["test"]["abc"]; p
 
 [source](http://www.cambus.net/parsing-json-from-command-line-using-python/)
 
+#### `jq`
+
+can also use [jq](https://stedolan.github.io/jq/) to pretty print, extract data (`echo '{"test":{"abc": "def", "ghi": 5}}' | jq '.test.abc'` for same field)
 
 ## Encryption / Security
 
@@ -93,14 +96,5 @@ Add to `fstab` if you want to use it after reboot:
 
 ### Updating
 
-#### Arch
-
-`pacman -Syu`
-
-Download only:
-
-`pacman -Syuw --noconfirm`
-
-#### CentOS
-
-`yum update`
+- Arch: `pacman -Syu`. download download only: `pacman -Syuw --noconfirm`
+- CentOS: `yum update`

@@ -98,3 +98,7 @@ Add to `fstab` if you want to use it after reboot:
 
 - Arch: `pacman -Syu`. download download only: `pacman -Syuw --noconfirm`
 - CentOS: `yum update`
+
+### cleanup
+
+remove package tarballs except for the latest 3 versions: `sudo paccache -rk3` (`paccache -vdk3` for a list of files)

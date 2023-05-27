@@ -75,6 +75,17 @@ Import:
 
 Creates a file specified by `-f` using the comment (the last part in the `.pub` file) from `-C`
 
+## Shell
+
+- Bash: use `shopt -s globstar` for recursive globbing (`ls **/*.ts`)
+- `ls *([2,3])` expands to the 2nd and 3rd matches only
+- `!!` expands to the last command (ex `sudo !!` to rerun last command as `sudo`)
+- `!git` expands to the last command that started with "git"
+- `!!:2` expands to the 2nd argument to the last command (_argument_, so `ls -v ; echo !!:1` expands to `-v`)
+- `!!:s/hello/bonjour` last command, but replace "hello" with "bonjour"
+
+Source and more [zsh expansion](https://thevaluable.dev/zsh-expansion-guide-example/)
+
 ## System
 
 ### Create Linux swapfile
